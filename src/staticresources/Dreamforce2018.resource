@@ -1,3 +1,11 @@
+/**
+ * JS Resource for the
+ * Dreamforce 2018 App.
+ *
+ * @author      Shruti Sridharan
+ * @since       22 Aug 2018
+ * @revisions   NIL
+ */
 var Dreamforce2018 = {
     constants : {
         messages : {
@@ -8,6 +16,11 @@ var Dreamforce2018 = {
         
     },
     helpers : {
+        /**
+         * [Message Logger]
+         * 
+         * @param  {[String]} msg [Message to be logged]
+         */
         log : function( msg ) {
             var $ele = $( "#txtDloadLog" );
             
@@ -24,6 +37,12 @@ var Dreamforce2018 = {
             
             $ele.val( log ).scrollTop( $ele.prop( "scrollHeight" ) );
         },
+        /**
+         * [Enable/Disable the buttons and 
+         * progress indicator.]
+         * 
+         * @param  {Boolean} isEnabled [Flag]
+         */
         enableDownload : function( isEnabled ) {
             var $btn    = $( "#btnDownload" );
             var $status = $( "#divStatus" );
@@ -34,6 +53,14 @@ var Dreamforce2018 = {
         }
     },
     actions : {
+        /**
+         * [Download the session from the DF
+         * website via an HttpRequest initiated
+         * via Apex Remote Action]
+         * 
+         * @param  {[String]} since         [Date on the last retrieved]
+         * @param  {[String]} lastSessionId [Id of the last retrieved session]
+         */
         getSessions : function( since, lastSessionId ) {
             var messages = Dreamforce2018.constants.messages;
             
@@ -55,7 +82,11 @@ var Dreamforce2018 = {
                                     function( dfSession ) {
                                         if( dfSession.Active__c && dfSession.IsVisibleToUsers__c ) {
                                             var allSpeakers = [];
-        
+                                            
+                                            /**
+                                             * Ensure we have speaker information
+                                             * available.
+                                             */
                                             if( dfSession.Session_Speakers__r !== undefined ) {
                                                 if( dfSession.Session_Speakers__r.records !== undefined ) {
                                                     dfSession.Session_Speakers__r.records.forEach(
@@ -140,7 +171,11 @@ var Dreamforce2018 = {
         
                                 var since           = downloadedSessions[downloadedSessions.length - 1].LastModified_AttendeeCritical__c;
                                 var lastSessionId   = downloadedSessions[downloadedSessions.length - 1].Id;
-        
+                                
+                                /**
+                                 * Save the sessions to the
+                                 * Session Custom Object.
+                                 */
                                 Dreamforce2018Controller.saveSessions(
                                     allSessions,
                                     function( result, event ) {
@@ -197,6 +232,9 @@ var Dreamforce2018 = {
         }
     },
     handlers : {
+        /**
+         * [Handler for the "Start Download" button]
+         */
         getSessions : function() {
             var messages = Dreamforce2018.constants.messages;
             
