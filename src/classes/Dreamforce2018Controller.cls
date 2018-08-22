@@ -1,3 +1,11 @@
+/**
+ * Apex Controller for the "Dreamforce2018"
+ * VF Page.
+ *
+ * @author      Shruti Sridharan
+ * @since       23 Aug 2018
+ * @revisions   NIL 
+ */
 public class Dreamforce2018Controller {
     private final static String ERR_MSG     = System.label.ERR_MSG;
     private final static String NO_SESSIONS = System.label.NO_SESSIONS;
@@ -26,6 +34,17 @@ public class Dreamforce2018Controller {
         }
     }
     
+    /**
+     * Downloads Dreamforce 2018 sessions from
+     * the Official Website offset by the "date"
+     * and "last retrieved session".
+     *
+     * @param       since           Date on the last retrieved
+     *                              session.
+     * @param       lastSessionId   Id of the last retrieved session.
+     * 
+     * @return      {Response}      All the downloaded sessions
+     */
     @RemoteAction
     public static Response downloadSessions( String since, String lastSessionId ) {
         String endpoint = SESSIONS_ENDPOINT;
@@ -62,6 +81,14 @@ public class Dreamforce2018Controller {
         }
     }
     
+    /**
+     * Save all the downloaded sessions in the
+     * Custom Object - Session__c.
+     *
+     * @param       sessions        List of the downloaded sessions
+     *
+     * @return      {Response}      Result of the save operation
+     */
     @RemoteAction
     public static Response saveSessions( List<Session__c> sessions ) {
         if( 
