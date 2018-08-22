@@ -45,6 +45,7 @@ public class Dreamforce2018Controller {
         httpReq.setMethod( 'GET' );
         httpReq.setEndpoint( endpoint );
         httpReq.setHeader( 'Content-Type', 'application/json' );
+        httpReq.setTimeout( 120000 );
         
         try {
             HttpResponse httpResp = new Http().send( httpReq );
