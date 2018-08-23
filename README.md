@@ -1,6 +1,8 @@
 # Dreamforce 2018
 Download Sessions to Your Org and Plan Your DF Better Than Ever!
 
+![image](https://user-images.githubusercontent.com/16715515/44512049-f77a4e00-a6d6-11e8-8a2f-3d7c24d45a19.png)
+
 ## What does this App do ?
 This app lets you to download all the session information from the official Dreamforce website into your Salesforce Org.
 
@@ -19,9 +21,6 @@ Use the below button to deploy this to your SF Org in a single click!
 </a>
 
 ## Post-Deployment Steps
-After deployment please carry out the following steps:
-1. Make the App **Dreamforce 2018** visible to the desired profiles.
-2. Make the Custom Object **Session** and all its **Custom Fields** visible to the desired profiles.
-3. Make the Custom Visualforce Tab **Download Sessions** and the Custom Object Tab **Sessions** visible to the desired profiles.
+After deployment please assign the Permission Set **Dreamforce 2018 App Permissions** to the desired users.
 
 You can start using the App by selecting **Dreamforce 2018** from the App Menu and then navigating to the **Download Sessions** Tab.
