@@ -65,6 +65,10 @@
         <name>ListView</name>
     </types>
     <types>
+        <members>Dreamforce_2018_App_Permissions</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
         <members>Trailblazer_Community</members>
         <name>RemoteSiteSetting</name>
     </types>
