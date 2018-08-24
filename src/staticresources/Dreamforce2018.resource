@@ -203,7 +203,8 @@ var Dreamforce2018 = {
                                     },
                                     {
                                         escape : false,
-                                        buffer : false
+                                        buffer : false,
+                                        timeout: 120000
                                     }
                                 );
                             }
@@ -232,7 +233,8 @@ var Dreamforce2018 = {
                     },
                     {
                         escape : false,
-                        buffer : false
+                        buffer : false,
+                        timeout: 120000
                     }
                 );
             }
