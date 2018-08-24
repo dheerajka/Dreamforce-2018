@@ -2,7 +2,7 @@
 Download Sessions to Your Org and Plan Your DF Better Than Ever!
 
 ## ⚠️ Disclaimer
-This app is not officially supported by Dreamforce or salesforce.com. This is a community contribution by <a href="https://twitter.com/shruti4chess" target="_blank">@shruti4chess</a> to make your DF planning a breeze. In case of any concerns or queries, please reach out to - shruti.sridharan22@gmail.com. Dreamforce Sessions and it's details are always a subject to change. Your source of truth should always be the Dreamforce website. 🙂
+This app is not officially supported by Dreamforce or salesforce.com. This is a community contribution by <a href="https://twitter.com/shruti4chess" target="_blank">@shruti4chess</a> to make your DF planning a breeze. In case of any concerns or queries, please reach out to - shruti.sridharan22@gmail.com. Dreamforce Sessions and it's details are always a subject to change. Your source of truth should always be the **Dreamforce website** and the **Agenda Builder**. 🙂
 
 ## ❔ What does this App do ?
 This app lets you to download all the session information from the official Dreamforce website into your Salesforce Org.
