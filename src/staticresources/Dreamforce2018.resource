@@ -73,7 +73,7 @@ var Dreamforce2018 = {
                     since,
                     lastSessionId,
                     function( result, event ) {
-                        if( result.status && event.status ) {
+                        if( event.status && result.status ) {
                             var speakerNames        = null;
                             var downloadedSessions  = JSON.parse( result.data );
                             
@@ -179,7 +179,7 @@ var Dreamforce2018 = {
                                 Dreamforce2018Controller.saveSessions(
                                     allSessions,
                                     function( result, event ) {
-                                        if( result.status && event.status ) {
+                                        if( event.status && result.status ) {
                                             if( downloadedSessions.length > 0 ) {
                                                 Dreamforce2018.helpers.log( messages.PROGESS_MSG.replace( "##COUNT##", allSessions.length ) );
             
