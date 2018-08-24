@@ -8,6 +8,7 @@ This app is not officially supported by Dreamforce or salesforce.com. This is a 
 This app lets you to download all the session information from the official Dreamforce website into your Salesforce Org.
 
 ![image](https://user-images.githubusercontent.com/16715515/44512049-f77a4e00-a6d6-11e8-8a2f-3d7c24d45a19.png)
+![image](https://user-images.githubusercontent.com/16715515/44601028-d90c7380-a7f8-11e8-9e0e-311313361a08.png)
 
 ## Why use this App ?
 What if you had all the sessions right into your Salesforce Org as records ? You could create custom fields to plan your Agenda, you could create list views of your favourite sessions, you could run reports on your must attend sessions and what not ?
